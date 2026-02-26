@@ -542,6 +542,41 @@ export default function SetupPage() {
                     inside Claude Code to finish setup.
                   </p>
                 </div>
+
+                {/* Marketing Skills */}
+                <div className="rounded-lg border border-[var(--border-color)] bg-[var(--bg-card)] p-6">
+                  <div className="mb-1 flex items-center gap-3">
+                    <h3 className="font-semibold text-[var(--text-primary)]">
+                      Marketing Skills
+                    </h3>
+                    <a
+                      href="https://github.com/coreyhaines31/marketingskills"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-[family-name:var(--font-mono)] text-[12px] text-[var(--accent-gold)] underline underline-offset-4"
+                    >
+                      View skill →
+                    </a>
+                  </div>
+                  <p className="mb-4 text-[15px]">
+                    CRO, copywriting, SEO, analytics, and growth engineering —
+                    a full marketing toolkit for Claude Code.
+                  </p>
+                  <OsContent
+                    mac={
+                      <CopyBlock
+                        command="npx skills add coreyhaines31/marketingskills"
+                        label="Paste this into Terminal"
+                      />
+                    }
+                    windows={
+                      <CopyBlock
+                        command="npx skills add coreyhaines31/marketingskills"
+                        label="Paste this into PowerShell"
+                      />
+                    }
+                  />
+                </div>
               </div>
             </div>
           </section>
