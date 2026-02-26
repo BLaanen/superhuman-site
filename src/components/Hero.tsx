@@ -43,7 +43,7 @@ export default function Hero() {
           className="mb-5 inline-flex items-center gap-2 rounded-md border border-[rgba(0,255,136,0.2)] bg-[var(--accent-green-dim)] px-3.5 py-2 font-[family-name:var(--font-mono)] text-[11px] font-medium uppercase tracking-wider text-[var(--accent-green)]"
           style={{ animation: "badgeFadeIn 0.5s ease-out 1.8s both" }}
         >
-          Live Workshop &bull; Feb 15
+          Live Workshop &bull; Mar 1
         </div>
 
         {/* Headline */}
@@ -71,7 +71,7 @@ export default function Hero() {
           style={{ animation: "heroFadeIn 0.6s ease-out 2.2s both" }}
         >
           {[
-            { dot: true, text: "Sunday, Feb 15th" },
+            { dot: true, text: "Sunday, Mar 1st" },
             { text: "12:00 – 14:30" },
             { text: "Amsterdam" },
             { text: "12 seats" },
@@ -90,19 +90,20 @@ export default function Hero() {
 
         {/* CTA */}
         <a
-          href="#rsvp"
+          href="https://chat.whatsapp.com/KPrCEswpRBjFWAJ3lXSvpd"
+          target="_blank"
+          rel="noopener noreferrer"
           className="cta-shine inline-flex items-center gap-2.5 rounded-[10px] bg-[var(--accent-gold)] px-8 py-4 text-[15px] font-bold uppercase tracking-[0.5px] text-[var(--bg-primary)] transition-all duration-250 hover:-translate-y-0.5 hover:bg-[#ffe456] hover:shadow-[0_10px_40px_rgba(255,214,10,0.3)]"
           style={{ animation: "heroFadeIn 0.6s ease-out 2.3s both" }}
         >
-          Claim Your Seat
+          Request to Join
           <svg
             viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            className="h-[18px] w-[18px] transition-transform duration-250 group-hover:translate-x-1"
+            fill="currentColor"
+            className="h-[18px] w-[18px]"
           >
-            <path d="M5 12h14M12 5l7 7-7 7" />
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" />
           </svg>
         </a>
 
@@ -111,7 +112,7 @@ export default function Hero() {
           className="mt-4 font-[family-name:var(--font-mono)] text-[13px] text-[var(--text-muted)]"
           style={{ animation: "heroFadeIn 0.6s ease-out 2.4s both" }}
         >
-          Leave with a deployed site AND a new operating system for execution.
+          Request to join the WhatsApp group to claim your spot.
         </p>
       </div>
     </div>

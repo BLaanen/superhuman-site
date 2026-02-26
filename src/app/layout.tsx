@@ -17,11 +17,11 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Superhuman: From Chatbots to Conductors",
   description:
-    "Build your personal website & learn the spec-driven methodology for any project. Sunday, Feb 15th. 12 seats only.",
+    "Build your personal website & learn the spec-driven methodology for any project. Sunday, Mar 1st. 12 seats only.",
   openGraph: {
     title: "Superhuman: From Chatbots to Conductors",
     description:
-      "Build your personal website & learn the spec-driven methodology for any project. Sunday, Feb 15th, Amsterdam.",
+      "Build your personal website & learn the spec-driven methodology for any project. Sunday, Mar 1st, Amsterdam.",
     type: "website",
   },
 };

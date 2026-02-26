@@ -20,7 +20,7 @@ export default function Home() {
         <span className="font-semibold text-[var(--accent-gold)]">
           12 seats only
         </span>{" "}
-        — Sunday, February 15th — Amsterdam
+        — Sunday, March 1st — Amsterdam
       </div>
 
       <div className="relative z-[1] mx-auto max-w-[880px] px-6">
