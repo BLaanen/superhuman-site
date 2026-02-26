@@ -459,6 +459,93 @@ export default function SetupPage() {
             </div>
           </section>
 
+          {/* Bonus */}
+          <section className="border-t border-[var(--border-subtle)] py-16">
+            <span className="mb-4 block font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-[2px] text-[var(--accent-gold)]">
+              Bonus
+            </span>
+            <h2 className="mb-6 text-[clamp(24px,3.5vw,30px)] font-bold leading-[1.2] tracking-[-0.02em]">
+              Level Up Your Website Building
+            </h2>
+            <div className="space-y-4 text-[16px] leading-[1.7] text-[var(--text-secondary)]">
+              <p>
+                These optional skills supercharge Claude Code for building
+                beautiful websites. Install them now so they&apos;re ready on
+                Sunday.
+              </p>
+
+              <div className="space-y-6">
+                {/* UI/UX Pro Max */}
+                <div className="rounded-lg border border-[var(--border-color)] bg-[var(--bg-card)] p-6">
+                  <div className="mb-1 flex items-center gap-3">
+                    <h3 className="font-semibold text-[var(--text-primary)]">
+                      UI/UX Pro Max
+                    </h3>
+                    <a
+                      href="https://skills.sh/nextlevelbuilder/ui-ux-pro-max-skill/ui-ux-pro-max"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-[family-name:var(--font-mono)] text-[12px] text-[var(--accent-gold)] underline underline-offset-4"
+                    >
+                      View skill →
+                    </a>
+                  </div>
+                  <p className="mb-4 text-[15px]">
+                    50+ design styles, 97 color palettes, 57 font pairings, and
+                    UX guidelines — all available as a skill inside Claude Code.
+                  </p>
+                  <OsContent
+                    mac={
+                      <CopyBlock
+                        command="npx skills add https://github.com/nextlevelbuilder/ui-ux-pro-max-skill --skill ui-ux-pro-max"
+                        label="Paste this into Terminal"
+                      />
+                    }
+                    windows={
+                      <CopyBlock
+                        command="npx skills add https://github.com/nextlevelbuilder/ui-ux-pro-max-skill --skill ui-ux-pro-max"
+                        label="Paste this into PowerShell"
+                      />
+                    }
+                  />
+                </div>
+
+                {/* Impeccable */}
+                <div className="rounded-lg border border-[var(--border-color)] bg-[var(--bg-card)] p-6">
+                  <div className="mb-1 flex items-center gap-3">
+                    <h3 className="font-semibold text-[var(--text-primary)]">
+                      Impeccable
+                    </h3>
+                    <a
+                      href="https://impeccable.style/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-[family-name:var(--font-mono)] text-[12px] text-[var(--accent-gold)] underline underline-offset-4"
+                    >
+                      View skill →
+                    </a>
+                  </div>
+                  <p className="mb-4 text-[15px]">
+                    Design fluency for Claude Code — 17 commands like /polish,
+                    /audit, /simplify, and /bolder to make your sites look
+                    professional.
+                  </p>
+                  <CopyBlock
+                    command="/plugin marketplace add pbakaus/impeccable"
+                    variant="claude"
+                  />
+                  <p className="mt-2 text-[14px] text-[var(--text-muted)]">
+                    After installing, run{" "}
+                    <code className="rounded border border-[var(--border-color)] bg-[var(--bg-tertiary)] px-1.5 py-0.5 font-[family-name:var(--font-mono)] text-[13px]">
+                      /plugin menu
+                    </code>{" "}
+                    inside Claude Code to finish setup.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Footer */}
           <footer className="border-t border-[var(--border-subtle)] py-16 text-center">
             <p className="font-[family-name:var(--font-display)] text-[clamp(24px,3.5vw,32px)] font-bold tracking-[-0.02em]">
