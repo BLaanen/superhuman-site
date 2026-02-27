@@ -32,8 +32,8 @@ export default function SetupPage() {
     <OsProvider>
       <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)]">
         {/* Header */}
-        <header className="border-b border-[var(--border-subtle)] px-6 py-4">
-          <div className="mx-auto flex max-w-[880px] items-center justify-between">
+        <header className="border-b border-[var(--border-subtle)]">
+          <div className="mx-auto flex max-w-[880px] items-center justify-between px-6 py-4">
             <span className="font-[family-name:var(--font-mono)] text-[13px] uppercase tracking-[2px] text-[var(--text-muted)]">
               Setup Guide
             </span>
