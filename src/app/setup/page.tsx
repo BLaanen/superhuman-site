@@ -133,25 +133,6 @@ export default function SetupPage() {
                   </a>
                 </span>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-1 text-[var(--accent-green)]">●</span>
-                <span>
-                  Node.js (free) —{" "}
-                  <a
-                    href="https://nodejs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[var(--accent-gold)] underline underline-offset-4"
-                  >
-                    nodejs.org
-                  </a>
-                  <br />
-                  <span className="text-[14px] text-[var(--text-muted)]">
-                    Download the LTS version. Needed for installing tools later
-                    in this guide.
-                  </span>
-                </span>
-              </li>
             </ul>
           </Step>
 
@@ -237,7 +218,61 @@ export default function SetupPage() {
           </Step>
 
           {/* Step 2 */}
-          <Step number="2" title="Install Claude Code">
+          <Step number="2" title="Install Node.js">
+            <p>
+              Check if Node.js is already installed by running this:
+            </p>
+            <OsContent
+              mac={
+                <CopyBlock command="node --version" label="Paste this into Terminal" />
+              }
+              windows={
+                <CopyBlock command="node --version" label="Paste this into PowerShell" />
+              }
+            />
+            <p>
+              If you see a version number (like{" "}
+              <code className="rounded border border-[var(--border-color)] bg-[var(--bg-tertiary)] px-1.5 py-0.5 font-[family-name:var(--font-mono)] text-[13px]">
+                v22.x.x
+              </code>
+              ), you&apos;re good — skip to the next step.
+            </p>
+            <p>
+              If you see &quot;command not found&quot; or an error, install it:
+            </p>
+            <OsContent
+              mac={
+                <CopyBlock
+                  command="curl -fsSL https://fnm.vercel.app/install | bash && source ~/.zshrc && fnm install --lts"
+                  label="Paste this into Terminal"
+                />
+              }
+              windows={
+                <CopyBlock
+                  command="winget install Schniz.fnm && fnm install --lts"
+                  label="Paste this into PowerShell"
+                />
+              }
+            />
+            <p>
+              Then verify it worked:
+            </p>
+            <OsContent
+              mac={
+                <CopyBlock command="node --version" label="Paste this into Terminal" />
+              }
+              windows={
+                <CopyBlock command="node --version" label="Paste this into PowerShell" />
+              }
+            />
+            <p className="text-[14px] text-[var(--text-muted)]">
+              You should now see a version number. Node.js is needed for
+              installing tools later in this guide.
+            </p>
+          </Step>
+
+          {/* Step 3 */}
+          <Step number="3" title="Install Claude Code">
             <OsContent
               mac={
                 <CopyBlock
@@ -279,8 +314,8 @@ export default function SetupPage() {
             </div>
           </Step>
 
-          {/* Step 3 */}
-          <Step number="3" title="Start Claude Code & Log In">
+          {/* Step 4 */}
+          <Step number="4" title="Start Claude Code & Log In">
             <OsContent
               mac={
                 <CopyBlock command="claude" label="Paste this into Terminal" />
@@ -311,8 +346,8 @@ export default function SetupPage() {
             </p>
           </Step>
 
-          {/* Step 4 */}
-          <Step number="4" title="Set Up GitHub">
+          {/* Step 5 */}
+          <Step number="5" title="Set Up GitHub">
             <p>
               Now that Claude Code is running, you can ask it to help you set up
               the rest.
@@ -331,8 +366,8 @@ export default function SetupPage() {
             </p>
           </Step>
 
-          {/* Step 5 */}
-          <Step number="5" title="Set Up Vercel">
+          {/* Step 6 */}
+          <Step number="6" title="Set Up Vercel">
             <p>Same approach — paste this into Claude Code:</p>
             <CopyBlock
               command="Help me install the Vercel CLI and log in to my Vercel account"
@@ -341,8 +376,8 @@ export default function SetupPage() {
             <p>Again, follow Claude&apos;s instructions. It knows what to do.</p>
           </Step>
 
-          {/* Step 6 */}
-          <Step number="6" title="Create a Project Folder">
+          {/* Step 7 */}
+          <Step number="7" title="Create a Project Folder">
             <OsContent
               mac={
                 <CopyBlock
@@ -362,8 +397,8 @@ export default function SetupPage() {
             </p>
           </Step>
 
-          {/* Step 7 */}
-          <Step number="7" title="Install GSD">
+          {/* Step 8 */}
+          <Step number="8" title="Install GSD">
             <OsContent
               mac={
                 <CopyBlock
@@ -386,8 +421,8 @@ export default function SetupPage() {
             </p>
           </Step>
 
-          {/* Step 8 */}
-          <Step number="8" title="Verify Everything Works">
+          {/* Step 9 */}
+          <Step number="9" title="Verify Everything Works">
             <p>
               Start Claude Code in your workshop folder and type:
             </p>
