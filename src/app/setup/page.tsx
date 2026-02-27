@@ -101,7 +101,9 @@ export default function SetupPage() {
                   <br />
                   <span className="text-[14px] text-[var(--text-muted)]">
                     Sonnet 4.6 is included and works great — no need for the more
-                    expensive tier.
+                    expensive tier. If this is out of budget right now, reach out
+                    to Bo-Peter or Konstantin in the WhatsApp group — we can
+                    arrange a guest pass for the workshop.
                   </span>
                 </span>
               </li>
