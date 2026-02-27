@@ -399,38 +399,105 @@ export default function SetupPage() {
 
           {/* Step 8 */}
           <Step number="8" title="Install GSD">
+            <p>
+              <strong className="text-[var(--text-primary)]">
+                Important:
+              </strong>{" "}
+              if you still have Claude Code running, exit it first by typing{" "}
+              <code className="rounded border border-[var(--border-color)] bg-[var(--bg-tertiary)] px-1.5 py-0.5 font-[family-name:var(--font-mono)] text-[13px]">
+                /exit
+              </code>{" "}
+              or pressing{" "}
+              <OsContent
+                mac={
+                  <kbd className="rounded border border-[var(--border-color)] bg-[var(--bg-tertiary)] px-2 py-0.5 font-[family-name:var(--font-mono)] text-[14px]">
+                    Ctrl + C
+                  </kbd>
+                }
+                windows={
+                  <kbd className="rounded border border-[var(--border-color)] bg-[var(--bg-tertiary)] px-2 py-0.5 font-[family-name:var(--font-mono)] text-[14px]">
+                    Ctrl + C
+                  </kbd>
+                }
+              />
+              . You need to be back at the regular{" "}
+              <OsContent
+                mac={<>Terminal prompt</>}
+                windows={<>PowerShell prompt</>}
+              />{" "}
+              for this step.
+            </p>
             <OsContent
               mac={
                 <CopyBlock
                   command="npx get-shit-done-cc@latest"
-                  label="Paste this into Terminal (not inside Claude Code)"
+                  label="Paste this into Terminal"
                 />
               }
               windows={
                 <CopyBlock
                   command="npx get-shit-done-cc@latest"
-                  label="Paste this into PowerShell (not inside Claude Code)"
+                  label="Paste this into PowerShell"
                 />
               }
             />
             <p>
-              When prompted, choose{" "}
-              <strong className="text-[var(--text-primary)]">Claude Code</strong>{" "}
-              and then{" "}
-              <strong className="text-[var(--text-primary)]">Global</strong>.
+              The installer will ask you a couple of questions. Choose:
             </p>
+            <ul className="ml-4 list-disc space-y-2">
+              <li>
+                Platform →{" "}
+                <strong className="text-[var(--text-primary)]">Claude Code</strong>
+              </li>
+              <li>
+                Install type →{" "}
+                <strong className="text-[var(--text-primary)]">Global</strong>
+              </li>
+            </ul>
           </Step>
 
           {/* Step 9 */}
           <Step number="9" title="Verify Everything Works">
             <p>
-              Start Claude Code in your workshop folder and type:
+              Navigate to your workshop folder and start Claude Code:
             </p>
-            <CopyBlock command="/gsd:help" />
+            <OsContent
+              mac={
+                <CopyBlock
+                  command="cd ~/Desktop/workshop && claude --dangerously-skip-permissions"
+                  label="Paste this into Terminal"
+                />
+              }
+              windows={
+                <CopyBlock
+                  command="cd ~\Desktop\workshop; claude --dangerously-skip-permissions"
+                  label="Paste this into PowerShell"
+                />
+              }
+            />
+            <p className="text-[14px] text-[var(--text-muted)]">
+              The{" "}
+              <code className="rounded border border-[var(--border-color)] bg-[var(--bg-tertiary)] px-1.5 py-0.5 font-[family-name:var(--font-mono)] text-[13px]">
+                --dangerously-skip-permissions
+              </code>{" "}
+              flag lets Claude Code run commands without asking for approval
+              each time. This is what we&apos;ll use during the workshop to keep
+              things moving.
+            </p>
+            <p>
+              Once Claude Code is running, type:
+            </p>
+            <CopyBlock command="/gsd:help" variant="claude" />
             <p>
               <strong className="text-[var(--text-primary)]">
-                If you see a list of commands, you&apos;re ready for Sunday.
-              </strong>
+                If you see a list of GSD commands, you&apos;re all set for
+                Sunday.
+              </strong>{" "}
+              You can close Claude Code by typing{" "}
+              <code className="rounded border border-[var(--border-color)] bg-[var(--bg-tertiary)] px-1.5 py-0.5 font-[family-name:var(--font-mono)] text-[13px]">
+                /exit
+              </code>
+              .
             </p>
           </Step>
 
