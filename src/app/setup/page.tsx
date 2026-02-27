@@ -133,6 +133,25 @@ export default function SetupPage() {
                   </a>
                 </span>
               </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1 text-[var(--accent-green)]">●</span>
+                <span>
+                  Node.js (free) —{" "}
+                  <a
+                    href="https://nodejs.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[var(--accent-gold)] underline underline-offset-4"
+                  >
+                    nodejs.org
+                  </a>
+                  <br />
+                  <span className="text-[14px] text-[var(--text-muted)]">
+                    Download the LTS version. Needed for installing tools later
+                    in this guide.
+                  </span>
+                </span>
+              </li>
             </ul>
           </Step>
 
@@ -234,7 +253,7 @@ export default function SetupPage() {
               }
             />
             <p>
-              This one command installs everything you need, including Node.js.
+              This one command installs Claude Code on your machine.
             </p>
             <div className="my-4 rounded-lg border border-[var(--accent-gold)] bg-[rgba(255,214,10,0.04)] px-5 py-4">
               <p className="font-semibold text-[var(--accent-gold)]">
