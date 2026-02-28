@@ -220,7 +220,57 @@ export default function SetupPage() {
           </Step>
 
           {/* Step 2 */}
-          <Step number="2" title="Install Node.js">
+          <Step number="2" title="Install Developer Tools">
+            <OsContent
+              mac={
+                <>
+                  <p>
+                    Mac needs a small set of developer tools before anything else
+                    will work. Run this:
+                  </p>
+                  <CopyBlock
+                    command="xcode-select --install"
+                    label="Paste this into Terminal"
+                  />
+                  <p>
+                    A popup will appear asking you to install the Command Line
+                    Tools. Click{" "}
+                    <strong className="text-[var(--text-primary)]">
+                      Install
+                    </strong>
+                    , then{" "}
+                    <strong className="text-[var(--text-primary)]">
+                      Agree
+                    </strong>{" "}
+                    to the license. This can take a few minutes.
+                  </p>
+                  <p className="text-[14px] text-[var(--text-muted)]">
+                    If you see &quot;already installed&quot; — great, you can
+                    skip to the next step.
+                  </p>
+                </>
+              }
+              windows={
+                <>
+                  <p>
+                    Windows is all set if you already have{" "}
+                    <a
+                      href="https://git-scm.com/downloads/win"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[var(--accent-gold)] underline underline-offset-4"
+                    >
+                      Git for Windows
+                    </a>{" "}
+                    installed (from Step 0). You can skip to the next step.
+                  </p>
+                </>
+              }
+            />
+          </Step>
+
+          {/* Step 3 */}
+          <Step number="3" title="Install Node.js">
             <p>
               Check if Node.js is already installed by running this:
             </p>
@@ -292,8 +342,8 @@ export default function SetupPage() {
             </p>
           </Step>
 
-          {/* Step 3 */}
-          <Step number="3" title="Install Claude Code">
+          {/* Step 4 */}
+          <Step number="4" title="Install Claude Code">
             <OsContent
               mac={
                 <CopyBlock
@@ -335,8 +385,8 @@ export default function SetupPage() {
             </div>
           </Step>
 
-          {/* Step 4 */}
-          <Step number="4" title="Start Claude Code & Log In">
+          {/* Step 5 */}
+          <Step number="5" title="Start Claude Code & Log In">
             <OsContent
               mac={
                 <CopyBlock command="claude" label="Paste this into Terminal" />
@@ -367,8 +417,8 @@ export default function SetupPage() {
             </p>
           </Step>
 
-          {/* Step 5 */}
-          <Step number="5" title="Set Up GitHub">
+          {/* Step 6 */}
+          <Step number="6" title="Set Up GitHub">
             <p>
               Now that Claude Code is running, you can ask it to help you set up
               the rest.
@@ -387,8 +437,8 @@ export default function SetupPage() {
             </p>
           </Step>
 
-          {/* Step 6 */}
-          <Step number="6" title="Set Up Vercel">
+          {/* Step 7 */}
+          <Step number="7" title="Set Up Vercel">
             <p>Same approach — paste this into Claude Code:</p>
             <CopyBlock
               command="Help me install the Vercel CLI and log in to my Vercel account"
@@ -397,8 +447,8 @@ export default function SetupPage() {
             <p>Again, follow Claude&apos;s instructions. It knows what to do.</p>
           </Step>
 
-          {/* Step 7 */}
-          <Step number="7" title="Create a Project Folder">
+          {/* Step 8 */}
+          <Step number="8" title="Create a Project Folder">
             <OsContent
               mac={
                 <CopyBlock
@@ -418,8 +468,8 @@ export default function SetupPage() {
             </p>
           </Step>
 
-          {/* Step 8 */}
-          <Step number="8" title="Install GSD">
+          {/* Step 9 */}
+          <Step number="9" title="Install GSD">
             <p>
               <strong className="text-[var(--text-primary)]">
                 Important:
@@ -477,8 +527,8 @@ export default function SetupPage() {
             </ul>
           </Step>
 
-          {/* Step 9 */}
-          <Step number="9" title="Verify Everything Works">
+          {/* Step 10 */}
+          <Step number="10" title="Verify Everything Works">
             <p>
               Navigate to your workshop folder and start Claude Code:
             </p>
