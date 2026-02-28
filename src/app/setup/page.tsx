@@ -240,22 +240,41 @@ export default function SetupPage() {
               ), you&apos;re good — skip to the next step.
             </p>
             <p>
-              If you see &quot;command not found&quot; or an error, install it:
+              If you see &quot;command not found&quot; or an error:
             </p>
-            <OsContent
-              mac={
-                <CopyBlock
-                  command="curl -fsSL https://fnm.vercel.app/install | bash && source ~/.zshrc && fnm install --lts"
-                  label="Paste this into Terminal"
+            <ol className="ml-4 list-decimal space-y-2">
+              <li>
+                Go to{" "}
+                <a
+                  href="https://nodejs.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--accent-gold)] underline underline-offset-4"
+                >
+                  nodejs.org
+                </a>{" "}
+                and download the{" "}
+                <strong className="text-[var(--text-primary)]">LTS</strong>{" "}
+                version
+              </li>
+              <li>Run the installer — click through the defaults</li>
+              <li>
+                <OsContent
+                  mac={
+                    <>
+                      Close Terminal (
+                      <kbd className="rounded border border-[var(--border-color)] bg-[var(--bg-tertiary)] px-2 py-0.5 font-[family-name:var(--font-mono)] text-[14px]">
+                        Cmd + Q
+                      </kbd>
+                      ) and reopen it
+                    </>
+                  }
+                  windows={
+                    <>Close PowerShell and reopen it</>
+                  }
                 />
-              }
-              windows={
-                <CopyBlock
-                  command="winget install Schniz.fnm && fnm install --lts"
-                  label="Paste this into PowerShell"
-                />
-              }
-            />
+              </li>
+            </ol>
             <p>
               Then verify it worked:
             </p>
